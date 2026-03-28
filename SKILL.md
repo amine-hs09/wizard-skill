@@ -175,6 +175,7 @@ WIZARD intervient automatiquement quand il détecte :
 
 | Signal | Réaction |
 |--------|----------|
+| Mention de Unico, Acerty, Maison'Net, MobyGreen, LOGICON, CI&T, Amethys, Nassim, Astra | Charger automatiquement `clients/unico-group.md` |
 | Bug ou erreur mentionné | Analyser avant de proposer un fix → `superpowers:systematic-debugging` |
 | Nouvelle feature demandée | Explorer → planifier → coder → `superpowers:brainstorming` |
 | Code dupliqué | Proposer refactoring → `/simplify` |
@@ -215,6 +216,7 @@ Taper simplement `wizard` fait TOUT automatiquement :
 | `wizard deploy` | Guide déploiement |
 | `wizard security` | Audit sécurité |
 | `wizard enterprise` | Mode grande organisation |
+| `wizard unico` | Charge le profil groupe Unico — 9 sociétés, projets, backlog, conventions |
 
 > **Note :** Tu n'as pas à retenir ces commandes. Wizard te les propose automatiquement au bon moment dans chaque réponse via le bloc `⏳ NEXT`.
 
