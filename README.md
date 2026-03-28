@@ -7,13 +7,13 @@
 ## Installation en 1 ligne
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/OtmanHSSINOUI/wizard-skill/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/amine-hs09/wizard-skill/main/install.sh | bash
 ```
 
 Ou manuellement :
 
 ```bash
-git clone https://github.com/OtmanHSSINOUI/wizard-skill.git
+git clone https://github.com/amine-hs09/wizard-skill.git
 cd wizard-skill
 bash install.sh
 ```

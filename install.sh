@@ -1,13 +1,13 @@
 #!/bin/bash
 # ============================================================
 # WIZARD — Installateur automatique pour Claude Code CLI
-# Usage : curl -fsSL https://raw.githubusercontent.com/OtmanHSSINOUI/wizard-skill/main/install.sh | bash
+# Usage : curl -fsSL https://raw.githubusercontent.com/amine-hs09/wizard-skill/main/install.sh | bash
 # ============================================================
 
 set -e
 
 WIZARD_DIR="$HOME/.claude/skills/wizard"
-REPO_URL="https://raw.githubusercontent.com/OtmanHSSINOUI/wizard-skill/main"
+REPO_URL="https://raw.githubusercontent.com/amine-hs09/wizard-skill/main"
 SCRIPTS_DIR="$HOME/.claude/scripts"
 
 echo ""
