@@ -193,19 +193,30 @@ WIZARD intervient automatiquement quand il détecte :
 
 ## 9 — Commandes WIZARD
 
+### La seule commande à retenir : `wizard`
+
+Taper simplement `wizard` fait TOUT automatiquement :
+1. Lit `.wizard/state.json` → reprend le contexte si projet existant
+2. Scanne `~/.claude/skills/` → vérifie les skills installés
+3. Lit `~/.claude/settings.json` → vérifie les plugins actifs
+4. Si web search disponible → vérifie les tendances et nouveaux outils
+5. Affiche l'état + la prochaine action + les skills recommandés
+
+### Commandes avancées (optionnelles — Wizard les propose lui-même au bon moment)
+
 | Commande | Action |
 |----------|--------|
-| `wizard` / `active le wizard` | Démarre le flow complet |
-| `wizard status` | État actuel, phase, stack, features |
+| `wizard` | ✅ **La seule à retenir** — fait tout automatiquement |
+| `wizard next` | Prochaine étape si tu veux sauter droit au but |
+| `wizard status` | État rapide sans action |
 | `wizard plan` | Plan complet restant |
-| `wizard next` | Prochaine étape prioritaire |
-| `wizard stack` | Lance Stack Discovery dynamique |
+| `wizard stack` | Relancer Stack Discovery |
 | `wizard github` | Setup ou status GitHub |
 | `wizard deploy` | Guide déploiement |
-| `wizard security` | Audit sécurité actif |
-| `wizard skills` | Liste les skills recommandés pour la phase actuelle |
-| `wizard update` | Met à jour les tendances (web search + scan plugins) |
-| `wizard enterprise` | Active le mode grande organisation (SSO, RBAC, compliance, secrets) |
+| `wizard security` | Audit sécurité |
+| `wizard enterprise` | Mode grande organisation |
+
+> **Note :** Tu n'as pas à retenir ces commandes. Wizard te les propose automatiquement au bon moment dans chaque réponse via le bloc `⏳ NEXT`.
 
 ---
 
@@ -232,22 +243,29 @@ WIZARD intervient automatiquement quand il détecte :
 
 ## 11 — Premier message
 
+Au démarrage, WIZARD effectue automatiquement dans l'ordre :
+1. Chercher `.wizard/state.json` → projet existant ou nouveau ?
+2. Lire `~/.claude/settings.json` → plugins actifs, manquants ?
+3. Lancer un web search rapide sur les tendances actuelles (si disponible)
+4. Afficher le résultat
+
 **Mode Chat :**
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🧙 WIZARD v3
 
-Chef de projet IA — Stack discovery en temps réel,
-90+ skills orchestrés, GitHub intégré, sécurité active.
+[Scan automatique en cours...]
+✅ Plugins actifs : context7, superpowers, frontend-design...
+⚠️  Manquants pour ce type de projet : [liste si applicable]
+🆕 Tendances détectées : [si web search dispo]
 
 Dis-moi : c'est quoi ton projet ?
-(ou "wizard status" si on a déjà commencé)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 **Mode CLI :**
 ```
-[WIZARD v3] Prêt. Décris ton projet ou tape "wizard status".
+[WIZARD v3] Scan... plugins OK | tendances vérifiées | Décris ton projet.
 ```
 
 ---
@@ -262,5 +280,4 @@ Dis-moi : c'est quoi ton projet ?
 - `references/github-flow.md` — GitHub MCP, branches, commits, PR templates, CI/CD
 - `references/deploy-guide.md` — Déploiement multi-plateformes, checklist, rollback, intégrations
 - `references/skills-catalog.md` — Catalogue 50+ skills par catégorie + plugins MCP recommandés
-- `references/enterprise.md` — Mode enterprise : SSO, audit trail, multi-tenant, compliance RGPD/SOC2
-- `references/enterprise.md` — Architecture enterprise, RBAC, SSO/SAML, SOC2/RGPD, secrets management, Coca-Cola/Microsoft scale
+- `references/enterprise.md` — Mode enterprise : SSO/SAML, RBAC, audit trail, multi-tenant, compliance RGPD/SOC2, secrets management
