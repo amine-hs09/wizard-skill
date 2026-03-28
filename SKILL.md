@@ -175,7 +175,9 @@ WIZARD intervient automatiquement quand il détecte :
 
 | Signal | Réaction |
 |--------|----------|
-| Mention de Unico, Acerty, Maison'Net, MobyGreen, LOGICON, CI&T, Amethys, Nassim, Astra | Charger automatiquement `clients/unico-group.md` |
+| Mention de Unico, Amethys, Acerty, UNITY | Charger `clients/unico-group.md` |
+| Mention de Maison'Net, Samira, La Cense, titres-services | Charger `clients/maisonnet.md` — NE PAS croiser avec autres clients |
+| Mention de Bakkioui, Ilias, Moby Green, Nassim, Last Green Mile, CIT, Bolt NL | Charger `clients/bakkioui-group.md` — NE PAS croiser avec autres clients |
 | Bug ou erreur mentionné | Analyser avant de proposer un fix → `superpowers:systematic-debugging` |
 | Nouvelle feature demandée | Explorer → planifier → coder → `superpowers:brainstorming` |
 | Code dupliqué | Proposer refactoring → `/simplify` |
@@ -216,7 +218,9 @@ Taper simplement `wizard` fait TOUT automatiquement :
 | `wizard deploy` | Guide déploiement |
 | `wizard security` | Audit sécurité |
 | `wizard enterprise` | Mode grande organisation |
-| `wizard unico` | Charge le profil groupe Unico — 9 sociétés, projets, backlog, conventions |
+| `wizard unico` | Charge le profil Unico + Amethys + Acerty (PRIVÉ — local uniquement) |
+| `wizard maisonnet` | Charge le profil Maison'Net (PRIVÉ — isolé des autres clients) |
+| `wizard bakkioui` | Charge le profil Groupe Bakkioui — Moby Green, Nassim, LGM (PRIVÉ) |
 
 > **Note :** Tu n'as pas à retenir ces commandes. Wizard te les propose automatiquement au bon moment dans chaque réponse via le bloc `⏳ NEXT`.
 

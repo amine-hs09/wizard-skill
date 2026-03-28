@@ -5,3 +5,6 @@ Thumbs.db
 node_modules/
 .env
 .env.local
+
+# PRIVÉ — Profils clients confidentiels (jamais sur GitHub public)
+clients/
