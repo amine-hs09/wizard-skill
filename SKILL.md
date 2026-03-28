@@ -94,16 +94,19 @@ Charger le module **uniquement quand la phase l'exige**. Ne pas tout charger d'u
 
 | Phase | Module à lire | Déclencheur |
 |-------|--------------|-------------|
-| Cadrage | `references/phases.md` § Cadrage | Début de projet |
-| Design | `references/phases.md` § Design | Projet avec UI |
-| Stack Discovery | `references/stack-radar.md` | Après cadrage / "wizard stack" |
+| Phase 0 — Discovery (25 questions) | `references/phases.md` § Phase 0 | Début de projet |
+| Phase 1 — Fondations & Design System | `references/phases.md` § Phase 1 | Après discovery |
+| Phase 2 — Auth & Sécurité | `references/phases.md` § Phase 2 + `references/security-audit.md` | Après fondations |
+| Phase 3 — Core Features (MVP) | `references/phases.md` § Phase 3 | Après auth |
+| Phase 4 — Collaboration Multi-Users | `references/phases.md` § Phase 4 | Après MVP |
+| Phase 5 — Polish Enterprise | `references/phases.md` § Phase 5 | Après collab |
+| Phase 6 — Testing & QA | `references/phases.md` § Phase 6 | Avant deploy |
+| Phase 7 — Launch & Monitor | `references/phases.md` § Phase 7 + `references/deploy-guide.md` | Pré-launch |
+| Stack Discovery dynamique | `references/stack-radar.md` | "wizard stack" / après discovery |
+| Stack Defaults + Archi + Dossiers + Securite | `references/stack-defaults.md` | Fallback sans web search |
 | Architecture DB | `references/db-architect.md` | Après stack / question DB |
-| Auth & Sécurité | `references/security-audit.md` | Après DB / "wizard security" |
 | GitHub Flow | `references/github-flow.md` | Setup repo / "wizard github" |
-| Développement | `references/phases.md` § Dev | Feature par feature |
-| Skills & Plugins | `references/skills-catalog.md` | Besoin d'un outil spécifique |
-| Déploiement | `references/deploy-guide.md` | Pré-launch / "wizard deploy" |
-| Post-lancement | `references/phases.md` § Post | Après deploy |
+| Skills & Plugins (50+) | `references/skills-catalog.md` | Besoin d'un outil spécifique |
 | Enterprise | `references/enterprise.md` | Équipe > 10 / données sensibles / "wizard enterprise" |
 
 ---
@@ -251,11 +254,13 @@ Dis-moi : c'est quoi ton projet ?
 
 ## Fichiers de référence
 
-- `references/phases.md` — Cadrage (9 questions), design, dev feature par feature, post-lancement
-- `references/stack-radar.md` — Stack discovery dynamique, web search, critères, mise à jour
+- `references/phases.md` — 8 phases complètes : Discovery (25 questions), Fondations, Auth, Core, Collab, Polish, QA, Launch + guide UX par skill
+- `references/stack-radar.md` — Stack discovery dynamique via web search, critères, mise à jour
+- `references/stack-defaults.md` — Stack par défaut (20 technos), architecture 6 couches, structure dossiers, checklist sécurité 15 mesures, palette couleurs, typographie
 - `references/db-architect.md` — Design DB, schémas SQL, RLS Supabase, migrations, seed
 - `references/security-audit.md` — Audit actif (3 niveaux), checklists, commandes bash
 - `references/github-flow.md` — GitHub MCP, branches, commits, PR templates, CI/CD
 - `references/deploy-guide.md` — Déploiement multi-plateformes, checklist, rollback, intégrations
-- `references/skills-catalog.md` — Catalogue 90+ skills par catégorie + plugins MCP recommandés
+- `references/skills-catalog.md` — Catalogue 50+ skills par catégorie + plugins MCP recommandés
+- `references/enterprise.md` — Mode enterprise : SSO, audit trail, multi-tenant, compliance RGPD/SOC2
 - `references/enterprise.md` — Architecture enterprise, RBAC, SSO/SAML, SOC2/RGPD, secrets management, Coca-Cola/Microsoft scale
